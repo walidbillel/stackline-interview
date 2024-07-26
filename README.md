@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Built with Next.js and Tailwind CSS.
 
-## Getting Started
+I chose to use Next.js because it is a React framework that allows for server-side rendering, which is great for SEO.
 
-First, run the development server:
+I chose to use Tailwind CSS because it is a utility-first CSS framework that allows for rapid styling of components and responsive design. It is also easy to customize and extend.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This app uses the mock data under `data/index.js` to display a list of products. The products are displayed in a grid layout. The user can click on a product to view more details about the product.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I didn't use Redux or any other state management library because the app is simple enough and uses the lastest features of Next.js to make the app more maintainable. I would consider using Redux if the app grows in complexity. For instance, if the app needed to manage user authentication and there are some actions like login, logout, add to cart, etc.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This app has 3 routes:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `/`: Home page
+- `/products`: Products page
+- `/products/:slug`: Product detail page - I chose to use the slug of the product as the URL parameter because it is more SEO-friendly. Using the ID could work as well, but it is not as human-readable and SEO-friendly.
 
-## Learn More
+I can expand this app by adding more features like:
 
-To learn more about Next.js, take a look at the following resources:
+- Pagination if there are a lot of products
+- Filtering by category, price, etc.
+- Sorting by price, rating, etc.
+- Search functionality
+- Custom 404 page
+- Loading state
+- Error handling
+- Unit tests
+- E2E tests
+- CI/CD
+- Docker
+- Storybook
+- Analytics
+- Sitemap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I can also make some private routes that require authentication to access. I can use NextAuth.js to handle authentication. Whether it's a user or admin, I can use roles to determine what they can access, like admin-only routes, where they can manage products, etc. I can also use a database to store the products and user data, include a chatbot, add more pages & api routes, etc. There are unlimited possibilities to expand this app.
